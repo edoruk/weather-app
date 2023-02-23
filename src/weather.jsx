@@ -18,7 +18,7 @@ export async function getWeather(lat, lon) {
 export async function getCoord(cityName) {
   return await axios
     .get(
-      `http://api.openweathermap.org/geo/1.0/direct?q=${cityName}&appid=44fb035e54ba009e89b9a92fb4bc45ed`
+      `https://api.openweathermap.org/geo/1.0/direct?q=${cityName}&appid=${API_KEY}`
     )
     .then((res) => {
       return {
